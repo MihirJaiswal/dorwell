@@ -21,23 +21,28 @@ export const navLinks = [
 
   export const categories = [
     {
-      name: "Interior Doors",
-      description: "Elevate your home's interior with our stylish and functional indoor doors.",
-      image: "/placeholder.svg?height=400&width=600"
-    },
-    {
-      name: "Exterior Doors",
-      description: "Make a lasting first impression with our durable and elegant exterior doors.",
-      image: "/placeholder.svg?height=400&width=600"
-    },
-    {
-      name: "Sliding Doors",
-      description: "Save space and add a modern touch with our smooth-gliding sliding door systems.",
-      image: "/placeholder.svg?height=400&width=600"
-    },
-    {
-      name: "Custom Designs",
+      name: "Custom Design",
       description: "Bring your vision to life with our bespoke door design and manufacturing service.",
-      image: "/placeholder.svg?height=400&width=600"
-    }
-  ]
+      image: "/features/feature.webp",
+      quickDetail: "Tailored to your specifications with limitless design options.",
+    },
+    {
+      name: "Quality Materials",
+      description: "Our doors are built from premium wood, steel, and glass materials.",
+      image: "/features/feature2.webp",
+      quickDetail: "Sourced sustainably, ensuring both durability and environmental responsibility.",
+    },
+    {
+      name: "Quality Craftsmanship",
+      description: "Attention to detail at every stage of the process, from design to finish.",
+      image: "/features/feature1.webp",
+      quickDetail: "Handcrafted by skilled artisans to ensure the highest quality.",
+    },
+    {
+      name: "Weatherproof",
+      description: "Built to withstand the harshest weather conditions, our doors provide excellent insulation and durability.",
+      image: "/features/feature3.webp",
+      quickDetail: "Resistant to water, wind, and extreme temperatures, ideal for all climates.",
+    },
+  ];
+  
