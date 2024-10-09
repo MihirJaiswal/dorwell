@@ -45,4 +45,27 @@ export const navLinks = [
       quickDetail: "Resistant to water, wind, and extreme temperatures, ideal for all climates.",
     },
   ];
+
+ export const craftSteps = [
+    {
+      title: "Premium Material Selection",
+      description: "We source only the finest woods and materials, ensuring durability and beauty in every door.",
+      image: "/placeholder.svg?height=400&width=600"
+    },
+    {
+      title: "Precision Engineering",
+      description: "Our state-of-the-art machinery cuts and shapes each component with unparalleled accuracy.",
+      image: "/placeholder.svg?height=400&width=600"
+    },
+    {
+      title: "Expert Craftsmanship",
+      description: "Skilled artisans meticulously assemble and finish each door, paying attention to every detail.",
+      image: "/placeholder.svg?height=400&width=600"
+    },
+    {
+      title: "Rigorous Quality Control",
+      description: "Every door undergoes thorough testing to ensure it meets our high standards of quality and functionality.",
+      image: "/placeholder.svg?height=400&width=600"
+    }
+  ]
   

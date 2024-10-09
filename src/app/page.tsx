@@ -1,5 +1,6 @@
 import Categories from '@/components/home/Categories'
 import BannerComponent from '@/components/home/Hero'
+import CraftsmanshipShowcase from '@/components/home/Process'
 import Header from '@/components/shared/Navbar'
 import React from 'react'
 
@@ -9,6 +10,7 @@ export default function page() {
       <Header/>
       <BannerComponent/>
       <Categories/>
+      <CraftsmanshipShowcase/>
     </div>
   )
 }
