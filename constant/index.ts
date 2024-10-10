@@ -38,12 +38,6 @@ export const navLinks = [
       image: "/features/feature1.webp",
       quickDetail: "Handcrafted by skilled artisans to ensure the highest quality.",
     },
-    {
-      name: "Weatherproof",
-      description: "Built to withstand the harshest weather conditions, our doors provide excellent insulation and durability.",
-      image: "/features/feature3.webp",
-      quickDetail: "Resistant to water, wind, and extreme temperatures, ideal for all climates.",
-    },
   ];
 
  export const craftSteps = [
