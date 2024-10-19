@@ -268,8 +268,8 @@ export const navLinks = [
             '/glimmer/glimmer4.webp',
         ],
         roomImages: [
-            '/rooms/glimmer-room1.webp',
-            '/rooms/glimmer-room2.webp'
+            '/img.png',
+            '/img2.png'
         ],
         catalogUrl: '/pdf/glimmer-series.pdf'
     },
