@@ -1,3 +1,4 @@
+import AboutUs from '@/components/home/About'
 import BentoGridDemo from '@/components/home/Bento'
 import ContactSection from '@/components/home/Contact'
 import BannerComponent from '@/components/home/Hero'
@@ -13,6 +14,7 @@ export default function page() {
       <Header/>
       <BannerComponent/>
       <BentoGridDemo/>
+      <AboutUs/>
       <Process/>
       <ServicesSection/>
       <Testimonials/>
