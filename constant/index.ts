@@ -1,4 +1,3 @@
-
 export const navLinks = [
     { name: 'Home', href: '#', className: 'text-blue-600 hover:text-blue-500 focus:text-blue-500' },
     { name: 'About', href: '#', className: 'text-gray-700 hover:text-gray-500 focus:text-gray-500' },

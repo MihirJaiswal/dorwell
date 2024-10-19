@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import img1 from "../../../public/features/feature.webp"; // Update with actual images
 import img2 from "../../../public/features/feature1.webp";
 import img3 from "../../../public/features/feature2.webp";
-import img4 from "../../../public/features/feature3.webp";
+import img4 from "../../../public/features/feature3.jpeg";
 
 const BentoGridDemo = () => {
   return (
@@ -70,9 +70,10 @@ const BentoGridDemo = () => {
         <Image
           src={img4}
           alt="Privacy & Trust"
+          quality={100}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-8 flex flex-col justify-end">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-8 flex flex-col justify-end">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Quality Craftsmanship
           </h1>
