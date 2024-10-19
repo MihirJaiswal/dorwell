@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="min-w-screen min-h-screen flex items-center justify-center py-10">
+    <div id="contact" className="min-w-screen min-h-screen flex items-center justify-center py-10">
       <div className="max-w-7xl w-full p-8">
         <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">Get in Touch</h2>
         <p className="text-center mb-8 text-gray-600">

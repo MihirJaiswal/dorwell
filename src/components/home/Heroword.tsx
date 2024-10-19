@@ -21,7 +21,7 @@ const HeroWord = () => {
                 <a href="#" className="bg-blue-700 text-white py-2 px-6 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105">
                     Discover More
                 </a>
-                <a href="#" className="text-black border-2 border-gray-300 py-2 px-6 rounded-lg bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                <a href="#contact" className="text-black border-2 border-gray-300 py-2 px-6 rounded-lg bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
                     Contact us
                 </a>
             </div>
