@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
   	extend: {
 		backgroundImage: {
-		"bg1":"url('/img2.png')",
+		"bg1":"url('/wood.jpeg')",
+		"bg2":"url('/wood2.jpg')",
 		},
   		colors: {
   			background: 'hsl(var(--background))',

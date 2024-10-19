@@ -133,4 +133,41 @@ export const navLinks = [
   ];
 
 
-  
+  export const footerSections = [
+    {
+      title: "Dorwell",
+      links: [
+        { text: "Home", href: "javascript:;" },
+        { text: "About", href: "javascript:;" },
+        { text: "Contact", href: "javascript:;" },
+        { text: "Features", href: "javascript:;" },
+      ],
+    },
+    {
+      title: "Products",
+      links: [
+        { text: "Item 1", href: "javascript:;" },
+        { text: "Item 2", href: "javascript:;" },
+        { text: "Item 3", href: "javascript:;" },
+        { text: "Item 4", href: "javascript:;" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { text: "FAQs", href: "javascript:;" },
+        { text: "Item 1", href: "javascript:;" },
+        { text: "Item 2", href: "javascript:;" },
+        { text: "User Guide", href: "javascript:;" },
+      ],
+    },
+    {
+      title: "Blogs",
+      links: [
+        { text: "Item 1", href: "javascript:;" },
+        { text: "Item 2", href: "javascript:;" },
+        { text: "New Updates", href: "javascript:;" },
+        { text: "Events", href: "javascript:;" },
+      ],
+    },
+  ];

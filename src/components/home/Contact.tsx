@@ -5,79 +5,87 @@ const ContactSection = () => {
   return (
     <div
       id="contact"
-      className="min-w-screen min-h-screen flex items-center justify-center py-16 px-3 border-b"
+      className="min-w-screen min-h-screen flex items-center justify-center py-16 px-3 border-b bg-gray-50"
     >
-      <div className="max-w-7xl w-full rounded-lg ">
+      <div className="max-w-5xl w-full">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-10 text-gray-800 tracking-tight">
-          Get in Touch
+          Knock on Our Door
         </h2>
         <p className="text-center mb-10 md:mb-12 text-lg text-gray-600 leading-relaxed">
-          We’d love to hear from you! Fill out the form below or contact us via email or phone.
+          Step through the door and let us know how we can assist you. Leave a message, or drop by our location—we're always happy to help!
         </p>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <form className=" p-8  space-y-6">
-            <div>
-              <label
-                className="block text-sm font-semibold text-gray-700 mb-2"
-                htmlFor="name"
+          <div className="bg-bg2 p-8 rounded-lg shadow-lg relative overflow-hidden">
+            {/* Semicircular top */}
+            <div className="absolute top-0 left-0 right-0 h-20 bg-bg2 rounded-t-full transform -translate-y-10" />
+            <form className="mt-10 space-y-6">
+              <div>
+                <label
+                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 rounded-lg transition duration-300 font-semibold text-lg"
               >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div>
-              <label
-                className="block text-sm font-semibold text-gray-700 mb-2"
-                htmlFor="email"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div>
-              <label
-                className="block text-sm font-semibold text-gray-700 mb-2"
-                htmlFor="message"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-300"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-lg transition duration-300 font-semibold text-lg"
-            >
-              Send Message
-            </button>
-          </form>
+                Open the Door
+              </button>
+            </form>
+          </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col justify-center p-8 bg-white rounded-lg border space-y-6">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+          <div className="bg-bg1 p-8 rounded-lg shadow-lg relative overflow-hidden">
+            {/* Semicircular top */}
+            <div className="absolute top-0 left-0 right-0 h-20  transform -translate-y-10" />
+            <h3 className="text-3xl font-semibold text-gray-800 mb-4 mt-10">
               Contact Information
             </h3>
+            <div className="bg-white p-4 rounded-lg">
             {contactInfo.map((contact, index) => (
-              <div key={index} className="flex items-center space-x-4">
-                <span className="text-indigo-600 text-lg font-medium">
+              <div key={index} className="flex items-center space-x-4 mb-2">
+                <span className="text-orange-600 text-lg font-medium">
                   {contact.label}:
                 </span>
                 {contact.link ? (
@@ -92,6 +100,7 @@ const ContactSection = () => {
                 )}
               </div>
             ))}
+            </div>
 
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">

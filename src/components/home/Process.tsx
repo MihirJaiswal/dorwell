@@ -56,8 +56,8 @@ export function Process() {
               index={index}
               className="rounded-md bg-transparent"
             >
-              <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-muted bg-background transition-colors duration-300 hover:bg-gray-200">
-                Slide {index + 1}
+              <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-muted bg-background transition-colors duration-300 hover:bg-gray-200 border-gray-400">
+                Process {index + 1}
               </span>
             </SliderThumbItem>
           ))}

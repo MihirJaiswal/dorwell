@@ -14,7 +14,7 @@ const ZoomedImage = ({ className, imgSrc }: { className?: string; imgSrc: any })
   };
 
   return (
-    <div className={cn("lg:bg-hero backdrop-blur-xl overflow-hidden", className)} onMouseMove={handleMouseMove}>
+    <div className={cn("lg:bg-hero backdrop-blur-xl overflow-hidden border border-orange-800", className)} onMouseMove={handleMouseMove}>
       <Image
         src={imgSrc}
         quality={100}
