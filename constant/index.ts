@@ -1,6 +1,6 @@
 export const navLinks = [
     { name: 'Home', href: '#', className: 'text-blue-600 hover:text-blue-500 focus:text-blue-500' },
-    { name: 'Products', href: '#', className: 'text-gray-700 hover:text-gray-500 focus:text-gray-500' },
+    { name: 'Products', href: '/products', className: 'text-gray-700 hover:text-gray-500 focus:text-gray-500' },
   ];
 
   export const content = {
@@ -174,7 +174,7 @@ export const navLinks = [
   export const CARD_DATA = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://images.unsplash.com/photo-1503898362-59e068e7f9d8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 2,
@@ -198,11 +198,11 @@ export const navLinks = [
     },
     {
       id: 7,
-      url: "https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://plus.unsplash.com/premium_photo-1680121502103-aab06a14e4f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRvb3J8ZW58MHx8MHx8fDA%3D",
     },
     {
       id: 8,
-      url: "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://plus.unsplash.com/premium_photo-1676968003472-7b10e064adab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZG9vcnxlbnwwfHwwfHx8MA%3D%3D",
     },
   ];
 
