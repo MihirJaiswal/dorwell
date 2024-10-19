@@ -222,42 +222,103 @@ export const navLinks = [
   ];
 
 
- export const categories = [
+  export const categories = [
     {
         id: 'membrane-series',
         name: 'Membrane Series',
         description: 'Economical and variety of designs.',
         image: '/categories/category2.webp', 
+        catalogImages: [
+            '/catalogs/membrane1.webp',
+            '/catalogs/membrane2.webp',
+            '/catalogs/membrane3.webp'
+        ],
+        roomImages: [
+            '/rooms/membrane-room1.webp',
+            '/rooms/membrane-room2.webp'
+        ],
+        catalogUrl: '/catalogs/membrane-series-catalog.pdf'
     },
     {
         id: 'groove-line-series',
         name: 'Groove Line Series',
         description: 'Embrace the smoothness and sharp finish in best quality laminate.',
         image: '/categories/category5.webp', 
+        catalogImages: [
+            '/catalogs/groove1.webp',
+            '/catalogs/groove2.webp',
+            '/catalogs/groove3.webp'
+        ],
+        roomImages: [
+            '/rooms/groove-room1.webp',
+            '/rooms/groove-room2.webp'
+        ],
+        catalogUrl: '/catalogs/groove-line-series-catalog.pdf'
     },
     {
         id: 'glimmer-series',
         name: 'Glimmer Series',
         description: 'Style and durability in one door.',
         image: '/categories/category4.webp', 
+        catalogImages: [
+          '/glimmer/glimmer.webp',
+            '/glimmer/glimmer1.webp',
+            '/glimmer/glimmer2.webp',
+            '/glimmer/glimmer3.webp',
+            '/glimmer/glimmer4.webp',
+        ],
+        roomImages: [
+            '/rooms/glimmer-room1.webp',
+            '/rooms/glimmer-room2.webp'
+        ],
+        catalogUrl: '/pdf/glimmer-series.pdf'
     },
     {
-        id: 'Builders-series',
+        id: 'builders-series',
         name: "Builder's Series",
         description: 'Best quality in this segment.',
-        image: '/categories/category1.webp', // Update with actual image path
-        
+        image: '/categories/category1.webp', 
+        catalogImages: [
+            '/catalogs/builders1.webp',
+            '/catalogs/builders2.webp',
+            '/catalogs/builders3.webp'
+        ],
+        roomImages: [
+            '/rooms/builders-room1.webp',
+            '/rooms/builders-room2.webp'
+        ],
+        catalogUrl: '/catalogs/builders-series-catalog.pdf'
     },
     {
         id: 'digi-groove-series',
         name: 'Digi Groove Series',
         description: 'Detailed creation at its best.',
-        image: '/categories/category3.webp', //
+        image: '/categories/category3.webp', 
+        catalogImages: [
+            '/catalogs/digi-groove1.webp',
+            '/catalogs/digi-groove2.webp',
+            '/catalogs/digi-groove3.webp'
+        ],
+        roomImages: [
+            '/rooms/digi-groove-room1.webp',
+            '/rooms/digi-groove-room2.webp'
+        ],
+        catalogUrl: '/catalogs/digi-groove-series-catalog.pdf'
     },
     {
-      id: 'poly-veneer-series',
-      name: 'poly veneer Series',
-      description: 'Detailed creation at its best.',
-      image: '/categories/category1.webp', // 
-  },
+        id: 'poly-veneer-series',
+        name: 'Poly Veneer Series',
+        description: 'Detailed creation at its best.',
+        image: '/categories/category1.webp', 
+        catalogImages: [
+            '/catalogs/poly-veneer1.webp',
+            '/catalogs/poly-veneer2.webp',
+            '/catalogs/poly-veneer3.webp'
+        ],
+        roomImages: [
+            '/rooms/poly-veneer-room1.webp',
+            '/rooms/poly-veneer-room2.webp'
+        ],
+        catalogUrl: '/catalogs/poly-veneer-series-catalog.pdf'
+    },
 ];

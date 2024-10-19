@@ -22,7 +22,7 @@ const CategoryCard = ({ category }: any) => {
             </div>
 
             {/* Title, Description, and Button in Bottom Left Corner */}
-            <div className="absolute bottom-0 left-0 p-4 bg-black/50 w-full text-left text-white">
+            <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t  from-black/60 to-transparent w-full text-left text-white">
                 <h2 className="text-xl font-semibold">{category.name}</h2>
                 <p className="text-sm mb-2">{category.description}</p>
                 <button
