@@ -1,10 +1,13 @@
-import { BentoGridSecondDemo } from '@/components/home/Bento'
-import Categories from '@/components/home/Categories'
-import ContactSection from '@/components/home/Contactus'
+import BentoGridSecondDemo  from '@/components/home/Bento'
+import ContactSection from '@/components/home/Contact'
 import BannerComponent from '@/components/home/Hero'
-import CraftsmanshipShowcase from '@/components/home/Process'
+import { Process } from '@/components/home/Process'
+import ServicesSection from '@/components/home/Service'
+import Testimonials from '@/components/home/Testimonials'
+import Sponsors from '@/components/home/Testimonials'
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Navbar'
+import { Contact } from 'lucide-react'
 import React from 'react'
 
 export default function page() {
@@ -13,7 +16,9 @@ export default function page() {
       <Header/>
       <BannerComponent/>
       <BentoGridSecondDemo/>
-      <CraftsmanshipShowcase/>
+      <ServicesSection/>
+      <Process/>
+      <Testimonials/>
       <ContactSection/>
       <Footer/>
     </div>

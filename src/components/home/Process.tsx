@@ -1,82 +1,60 @@
-'use client'
-import { useState } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { craftSteps } from "../../../constant/index"
+'use client';
 
-export default function CraftsmanshipShowcase() {
-  const [currentStep, setCurrentStep] = useState(0)
+import {
+  Carousel,
+  CarouselMainContainer,
+  CarouselThumbsContainer,
+  SliderMainItem,
+  SliderThumbItem,
+} from "@/components/ui/carousel-extended";
+import Image from "next/image";
+import { craftSteps } from "../../../constant";
 
-  const nextStep = () => {
-    setCurrentStep((prev) => (prev + 1) % craftSteps.length)
-  }
-
-  const prevStep = () => {
-    setCurrentStep((prev) => (prev - 1 + craftSteps.length) % craftSteps.length)
-  }
-
+export function Process() {
   return (
-    <section className="py-16 bg-[#FAF5F5]">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Craftsmanship Process</h2>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-          <Button
-            variant="outline"
-            size="icon"
-            className="hidden lg:flex"
-            onClick={prevStep}
-          >
-            <ChevronLeft className="h-4 w-4" />
-            <span className="sr-only">Previous step</span>
-          </Button>
-          <Card className="w-full max-w-3xl">
-            <div className="relative h-64 sm:h-80 overflow-hidden">
-              <img
-                src={craftSteps[currentStep].image}
-                alt={craftSteps[currentStep].title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <CardContent className="p-6">
-              <h3 className="text-2xl font-semibold mb-4">{craftSteps[currentStep].title}</h3>
-              <p className="text-zinc-600">{craftSteps[currentStep].description}</p>
-            </CardContent>
-          </Card>
-          <Button
-            variant="outline"
-            size="icon"
-            className="hidden lg:flex"
-            onClick={nextStep}
-          >
-            <ChevronRight className="h-4 w-4" />
-            <span className="sr-only">Next step</span>
-          </Button>
-        </div>
-        <div className="flex justify-center mt-8 gap-4 lg:hidden">
-          <Button variant="outline" size="sm" onClick={prevStep}>
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Previous
-          </Button>
-          <Button variant="outline" size="sm" onClick={nextStep}>
-            Next
-            <ChevronRight className="h-4 w-4 ml-2" />
-          </Button>
-        </div>
-        <div className="flex justify-center mt-8">
-          {craftSteps.map((_, index) => (
-            <button
+   <>
+    <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 mt-10 mb-2">
+    What We Offer
+  </h2>
+    <Carousel orientation="vertical" className="flex items-center justify-center gap-2 my-12">
+      
+      <div className="relative basis-3/4">
+        <CarouselMainContainer className="h-96">
+          {craftSteps.map((step, index) => (
+            <SliderMainItem
               key={index}
-              className={`w-3 h-3 rounded-full mx-1 ${
-                index === currentStep ? 'bg-primary' : 'bg-zinc-300'
-              }`}
-              onClick={() => setCurrentStep(index)}
+              className="flex h-full items-center justify-center rounded-md border border-muted relative overflow-hidden" // Adjusted styles
             >
-              <span className="sr-only">Step {index + 1}</span>
-            </button>
+              <Image
+                src={step.image}
+                alt={step.title}
+                quality={100}
+                loading="lazy"
+                className="w-full h-full object-cover"
+                layout="fill" // Ensures the image fills the container
+              />
+              <div className="absolute bottom-0 right-0 p-4 bg-black bg-opacity-70 rounded-tl-md rounded-br-md">
+                <h2 className="text-lg font-semibold text-white">{step.title}</h2>
+                <p className="text-sm text-gray-300">{step.description}</p>
+              </div>
+            </SliderMainItem>
           ))}
-        </div>
+        </CarouselMainContainer>
       </div>
-    </section>
-  )
+      <CarouselThumbsContainer className="h-60 basis-1/4">
+        {craftSteps.map((_, index) => (
+          <SliderThumbItem
+            key={index}
+            index={index}
+            className="rounded-md bg-transparent"
+          >
+            <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-muted bg-background transition-colors duration-300 hover:bg-gray-200">
+              Slide {index + 1}
+            </span>
+          </SliderThumbItem>
+        ))}
+      </CarouselThumbsContainer>
+    </Carousel>
+   </>
+  );
 }

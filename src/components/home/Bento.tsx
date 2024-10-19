@@ -1,67 +1,89 @@
-import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-import { div } from "framer-motion/client";
+import Image from "next/image";
+import { IoIosArrowForward } from "react-icons/io";
+import img1 from "../../../public/features/feature.webp"; // Update with actual images
+import img2 from "../../../public/features/feature1.webp";
+import img3 from "../../../public/features/feature2.webp";
+import img4 from "../../../public/features/feature3.webp";
 
-export function BentoGridSecondDemo() {
+const BentoGridDemo = () => {
   return (
-    <div className="my-12">
-        <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-zinc-900 mb-4">What we offer</h2>
-        <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Explore a wide range of premium door collections.</p>
-      </div>
-    <BentoGrid className="max-w-4xl  mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={item.className}
-          icon={item.icon}
+    <>
+    <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 mt-10 mb-5">
+      What We Offer
+    </h2>
+    <p className="text-center px-4 text-sm md:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
+      We are a door manufacturing company specializing in designer doors. With our expertise in membrane, laminate, and veneer doors, we deliver top-notch quality and style.
+    </p>
+
+    <div className="grid md:h-screen max-w-7xl mx-auto p-10 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+      
+      {/* Large Feature 1 */}
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 row-span-2 rounded-xl overflow-hidden relative group">
+        <Image
+          src={img1}
+          alt="Productivity Boost"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      ))}
-    </BentoGrid>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent p-8 flex flex-col justify-end">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Custom Design
+          </h1>
+          <button className="flex items-center text-white font-medium">
+          Bring your vision to life with our bespoke door design and manufacturing service.
+          </button>
+        </div>
+      </div>
+
+      {/* Feature 2 */}
+      <div className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 inset-0 h-full w-full bg-zinc-100 bg-[radial-gradient(#d4d6d9_1px,transparent_1px)] [background-size:16px_16px] border border-gray-300 p-6 rounded-xl flex flex-col justify-between">
+        <Image
+          src={img2}
+          alt=""
+          className="w-full h-32 md:h-40 object-cover rounded-lg mb-6"
+        />
+        <h2 className="text-xl md:text-2xl font-semibold text-black mb-2">
+        Quality Materials
+        </h2>
+        <p className="text-gray-500">
+        Our doors are built from premium wood, steel, and glass materials.
+        </p>
+      </div>
+
+      {/* Feature 3 */}
+      <div className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 inset-0 h-full w-full bg-zinc-100 bg-[radial-gradient(#d4d6d9_1px,transparent_1px)] [background-size:16px_16px] border border-gray-300 p-6 rounded-xl flex flex-col justify-between">
+        <Image
+          src={img3}
+          alt="The Art of Design"
+          className="w-full h-32 md:h-40 object-cover rounded-lg mb-6"
+        />
+        <h2 className="text-xl md:text-2xl font-semibold text-black mb-2">
+        Discover the beauty of design.
+        </h2>
+        <p className="text-gray-500">
+          Build confidently with tools crafted by the top minds in AI.
+        </p>
+      </div>
+
+      {/* Large Feature 4 */}
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 row-span-2 rounded-xl overflow-hidden relative group">
+        <Image
+          src={img4}
+          alt="Privacy & Trust"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-8 flex flex-col justify-end">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Quality Craftsmanship
+          </h1>
+          <button className="flex items-center text-white font-medium">
+          Attention to detail at every stage of the process, from design to finish.
+          </button>
+        </div>
+      </div>
     </div>
+    </>
   );
-}
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
-const items = [
-  {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
-];
+};
+
+export default BentoGridDemo;
