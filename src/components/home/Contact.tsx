@@ -34,7 +34,7 @@ const ContactSection = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4"> 
               <label className="block text-gray-700 mb-2" htmlFor="message">
                 Message
               </label>
