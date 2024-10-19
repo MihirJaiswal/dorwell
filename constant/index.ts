@@ -1,6 +1,7 @@
 export const navLinks = [
-    { name: 'Home', href: '#', className: 'text-blue-600 hover:text-blue-500 focus:text-blue-500' },
+    { name: 'Home', href: '/', className: 'text-blue-600 hover:text-blue-500 focus:text-blue-500' },
     { name: 'Products', href: '/products', className: 'text-gray-700 hover:text-gray-500 focus:text-gray-500' },
+    { name: 'Gallery', href: '/gallery', className: 'text-gray-700 hover:text-gray-500 focus:text-gray-500' },
   ];
 
   export const content = {
@@ -206,3 +207,57 @@ export const navLinks = [
     },
   ];
 
+  export const images: string[] = [
+    "https://pagedone.io/asset/uploads/1713942989.png",
+    "https://pagedone.io/asset/uploads/1713943004.png",
+    "https://pagedone.io/asset/uploads/1713943024.png",
+    "https://pagedone.io/asset/uploads/1713943039.png",
+    "https://pagedone.io/asset/uploads/1713943054.png",
+    // Add more image URLs here
+    "https://pagedone.io/asset/uploads/1713942989.png",
+    "https://pagedone.io/asset/uploads/1713943004.png",
+    "https://pagedone.io/asset/uploads/1713943024.png",
+    "https://pagedone.io/asset/uploads/1713943039.png",
+    "https://pagedone.io/asset/uploads/1713943054.png",
+  ];
+
+
+ export const categories = [
+    {
+        id: 'membrane-series',
+        name: 'Membrane Series',
+        description: 'Economical and variety of designs.',
+        image: '/categories/category2.webp', 
+    },
+    {
+        id: 'groove-line-series',
+        name: 'Groove Line Series',
+        description: 'Embrace the smoothness and sharp finish in best quality laminate.',
+        image: '/categories/category5.webp', 
+    },
+    {
+        id: 'glimmer-series',
+        name: 'Glimmer Series',
+        description: 'Style and durability in one door.',
+        image: '/categories/category4.webp', 
+    },
+    {
+        id: 'Builders-series',
+        name: "Builder's Series",
+        description: 'Best quality in this segment.',
+        image: '/categories/category1.webp', // Update with actual image path
+        
+    },
+    {
+        id: 'digi-groove-series',
+        name: 'Digi Groove Series',
+        description: 'Detailed creation at its best.',
+        image: '/categories/category3.webp', //
+    },
+    {
+      id: 'poly-veneer-series',
+      name: 'poly veneer Series',
+      description: 'Detailed creation at its best.',
+      image: '/categories/category1.webp', // 
+  },
+];
