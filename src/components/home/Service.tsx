@@ -4,7 +4,7 @@ import { service } from '../../../constant'; // Ensure the correct path to const
 
 const ServicesSection = () => {
   return (
-    <section className="dark:bg-gray-900 py-16 inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+    <section className="dark:bg-gray-900 border-t py-16 inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Section Wrapper */}
       <div className="container mx-auto px-6 md:px-10 xl:px-20 max-w-7xl">
         {/* First Service Section */}
@@ -57,7 +57,9 @@ const ServicesSection = () => {
               <Image
                 src={service[1].image}
                 alt="Seamless Integration for Maximum Efficiency"
-                layout='fill'
+                width={500}
+                height={500}
+                loading='lazy'
               />
             </div>
           </div>

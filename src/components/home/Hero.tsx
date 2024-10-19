@@ -63,6 +63,7 @@ export default function Component() {
           alt="Hero Background"
           className="w-full h-full object-cover"
           quality={100}
+          loading='lazy'
         />
       </div>
  

@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full  shadow-sm text-base py-2 transition-colors duration-300">
+    <header className="relative border-b flex flex-wrap sm:justify-start sm:flex-nowrap w-full  shadow-sm text-base py-2 transition-colors duration-300">
       <nav className="max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
           <a href="#" aria-label="Brand" className="text-2xl font-bold tracking-wide text-black focus:outline-none">

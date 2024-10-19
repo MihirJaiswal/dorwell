@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/carousel-extended";
 import Image from "next/image";
 import { craftSteps } from "../../../constant";
-import img from '../../../public/img2.png'
+import img from '../../../public/process/process1.jpg'
 
 export function Process() {
   return (
-    <div className="relative"> {/* Set the parent div to relative */}
-      <div className="absolute inset-0 z-0 opacity-30"> {/* Use z-0 to place it behind the text */}
+    <div className="relative border-t border-b border-gray-400"> {/* Set the parent div to relative */}
+      <div className="absolute inset-0 z-0 opacity-30 "> {/* Use z-0 to place it behind the text */}
         <Image
           src={img}
           alt="Hero Background"

@@ -26,22 +26,34 @@ const HeroWord = () => {
                 </a>
             </div>
             <div className="flex -space-x-2 mb-6">
-                <img
+                <Image
+                    height={100}
+                    width={100}
+                    loading='lazy'
                     className="w-10 h-10 rounded-full border-2 border-white shadow"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                     alt="Bonnie Green Avatar"
                 />
-                <img
+                <Image
+                    height={100}
+                    width={100}
+                    loading='lazy'
                     className="w-10 h-10 rounded-full border-2 border-white shadow"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
                     alt="Jese Leos Avatar"
                 />
-                <img
+                <Image 
+                    height={100}
+                    width={100}
+                    loading='lazy'
                     className="w-10 h-10 rounded-full border-2 border-white shadow"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png"
                     alt="Sofia McGuire Avatar"
                 />
-                <img
+                <Image  
+                    height={100}
+                    width={100}
+                    loading='lazy'
                     className="w-10 h-10 rounded-full border-2 border-white shadow"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png"
                     alt="Thomas Lean Avatar"
@@ -62,7 +74,7 @@ const HeroWord = () => {
             </a>
             <iframe
                 className="w-full lg:w-2/3 h-64 rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/mTAupMv-3t8"
+                src="https://www.youtube.com/embed/v=hm86f6ARs3g"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
