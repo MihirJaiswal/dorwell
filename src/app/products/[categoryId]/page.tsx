@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { categories } from '../../../../constant'; // Ensure this is the correct import path
 import Header from '@/components/shared/Navbar';
 import {
@@ -13,6 +12,7 @@ import {
     SliderThumbItem,
 } from "@/components/ui/carousel-extended";
 import Footer from '@/components/shared/Footer';
+import Image from 'next/image';
 
 // Lightbox Component
 const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () => void; imageSrc: string }) => {
@@ -22,7 +22,12 @@ const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () 
             onClick={onClose}
         >
             <span className="absolute top-4 right-4 text-white text-3xl cursor-pointer" onClick={onClose}>&times;</span>
-            <img src={imageSrc} alt="" className="lightbox-image" />
+            <Image 
+            src={imageSrc} 
+            alt="" className="lightbox-image"
+            width={1000}
+            height={1000}
+             />
         </div>
     );
 };
@@ -72,9 +77,11 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
                 <div className='flex flex-col lg:flex-row justify-center items-center lg:space-x-20'>
                     {/* Category Title and Description */}
                     <div className="mb-8">
-                        <img
+                        <Image
                             src={category.image}
                             alt={category.name}
+                            width={500}
+                            height={500}
                             className="w-full max-w-xl rounded-lg shadow-lg mb-6"
                         />
                     </div>
@@ -84,9 +91,11 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {category.catalogImages.map((image, index) => (
                                 <div key={index} className="relative overflow-hidden rounded-lg shadow-lg group transition duration-300 ease-in-out">
-                                    <img
+                                    <Image
                                         src={image}
                                         alt={`Catalog ${index + 1}`}
+                                        width={300}
+                                        height={300}
                                         className="w-full h-60 object-cover rounded-lg group-hover:scale-110 transition-transform duration-300 cursor-pointer"
                                         onClick={() => openLightbox(image)} // Open lightbox on click
                                     />
@@ -112,8 +121,12 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
                             {category.roomImages.map((image, index) => (
                                 <SliderMainItem key={index} className="bg-transparent">
                                     <div className="flex size-full items-center justify-center rounded-xl bg-background outline outline-1 outline-border">
-                                        <img 
+                                        <Image
                                             src={image} 
+                                            width={600}
+                                            height={600}                                        
+                                            quality={100}
+                                            loading='lazy'
                                             alt={`Room Background ${index + 1}`} 
                                             className="w-full h-full object-cover rounded-xl cursor-pointer" 
                                             onClick={() => openLightbox(image)} // Open lightbox on click
@@ -126,8 +139,10 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
                             {category.roomImages.map((image, index) => (
                                 <SliderThumbItem key={index} index={index} className="bg-transparent">
                                     <div className="flex size-full items-center justify-center rounded-xl bg-background outline outline-1 outline-border">
-                                        <img 
+                                        <Image
                                             src={image} 
+                                            width={100}
+                                            height={100}
                                             alt={`Room Background Thumbnail ${index + 1}`} 
                                             className="w-16 h-16 object-cover rounded-xl cursor-pointer" 
                                         />

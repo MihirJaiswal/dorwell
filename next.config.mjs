@@ -6,8 +6,10 @@ const nextConfig = {
         },
         {
           hostname: 'i.pravatar.cc',
+        },
+        {
+          hostname: 'pagedone.io',
         }
-        
       ],
     },
   };

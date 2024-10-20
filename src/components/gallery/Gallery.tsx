@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { images } from '../../../constant';
+import Image from 'next/image';
 // Lightbox Component
 const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () => void; imageSrc: string }) => {
   return (
@@ -45,16 +46,20 @@ const Gallery: React.FC = () => {
           <div className="flex flex-col mb-10">
             <div className="grid md:grid-cols-12 gap-8 lg:mb-11 mb-7">
               <div className="md:col-span-4 md:h-[404px] h-[277px] w-full rounded-3xl">
-                <img
+                <Image
                   src={images[0]}
+                  width={500}
+                  height={500}
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-4 md:col-span-6 w-full h-full cursor-pointer"
                   onClick={() => openLightbox(images[0])}
                 />
               </div>
               <div className="md:col-span-8 md:h-[404px] h-[277px] w-full rounded-3xl">
-                <img
+                <Image
                   src={images[1]}
+                  width={500}
+                  height={500}
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-8 md:col-span-6 w-full h-full cursor-pointer"
                   onClick={() => openLightbox(images[1])}
@@ -64,8 +69,10 @@ const Gallery: React.FC = () => {
             <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
               {images.slice(2).map((src, index) => (
                 <div key={index} className="h-[277px] w-full rounded-3xl">
-                  <img
+                  <Image
                     src={src}
+                    width={500}
+                    height={500}
                     alt="Gallery image"
                     className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto w-full h-full cursor-pointer"
                     onClick={() => openLightbox(src)}
