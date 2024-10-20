@@ -77,11 +77,11 @@ const Testimonials = () => {
               </div>
               <p className="text-sm leading-tight text-gray-800 mb-4">
                 <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                  "
+                  &ldquo;
                 </span>
                 {testimonial.text}
                 <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                  "
+                  &rdquo;
                 </span>
               </p>
               <StarRating rating={testimonial.rating} />

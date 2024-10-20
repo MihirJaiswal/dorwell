@@ -18,7 +18,7 @@ export function CardSwipe({ children, onSendToBack }: CardSwipeProps) {
   const rotateX = useTransform(y, [-100, 100], [60, -60]);
   const rotateY = useTransform(x, [-100, 100], [-60, 60]);
 
-  const handleDragEnd = (_: any, info: PanInfo) => {
+  const handleDragEnd = (_: MouseEvent | TouchEvent, info: PanInfo) => {
     const threshold = 180;
     if (Math.abs(info.offset.x) > threshold || Math.abs(info.offset.y) > threshold) {
       onSendToBack();
