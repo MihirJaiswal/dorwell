@@ -10,7 +10,12 @@ const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () 
       onClick={onClose}
     >
       <span className="absolute top-4 right-4 text-white text-3xl cursor-pointer" onClick={onClose}>&times;</span>
-      <img src={imageSrc} alt="" className="lightbox-image max-w-full max-h-full" />
+      <Image
+       src={imageSrc} 
+       alt=""
+       width={1000}
+       height={1000}
+       className="lightbox-image max-w-full max-h-full" />
     </div>
   );
 };

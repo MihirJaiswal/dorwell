@@ -12,7 +12,7 @@ const ContactSection = () => {
           Knock on Our Door
         </h2>
         <p className="text-center mb-10 md:mb-12 text-lg text-gray-600 leading-relaxed">
-          Step through the door and let us know how we can assist you. Leave a message, or drop by our location—we're always happy to help!
+          Step through the door and let us know how we can assist you. Leave a message, or drop by our location—we&apos;re always happy to help!
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -78,28 +78,28 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="bg-bg1 p-8 rounded-lg shadow-lg relative overflow-hidden">
             {/* Semicircular top */}
-            <div className="absolute top-0 left-0 right-0 h-20  transform -translate-y-10" />
+            <div className="absolute top-0 left-0 right-0 h-20 transform -translate-y-10" />
             <h3 className="text-3xl font-semibold text-gray-800 mb-4 mt-10">
               Contact Information
             </h3>
             <div className="bg-white p-4 rounded-lg">
-            {contactInfo.map((contact, index) => (
-              <div key={index} className="flex items-center space-x-4 mb-2">
-                <span className="text-orange-600 text-lg font-medium">
-                  {contact.label}:
-                </span>
-                {contact.link ? (
-                  <a
-                    href={contact.link}
-                    className="text-gray-700 hover:text-indigo-500 transition"
-                  >
-                    {contact.value}
-                  </a>
-                ) : (
-                  <span className="text-gray-700">{contact.value}</span>
-                )}
-              </div>
-            ))}
+              {contactInfo.map((contact, index) => (
+                <div key={index} className="flex items-center space-x-4 mb-2">
+                  <span className="text-orange-600 text-lg font-medium">
+                    {contact.label}:
+                  </span>
+                  {contact.link ? (
+                    <a
+                      href={contact.link}
+                      className="text-gray-700 hover:text-indigo-500 transition"
+                    >
+                      {contact.value}
+                    </a>
+                  ) : (
+                    <span className="text-gray-700">{contact.value}</span>
+                  )}
+                </div>
+              ))}
             </div>
 
             <div className="mt-8">

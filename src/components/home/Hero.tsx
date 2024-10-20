@@ -34,7 +34,7 @@ export default function Component() {
   };
 
   const variants = {
-    enter: (direction:any) => ({
+    enter: (direction: number) => ({
       x: direction > 0 ? 100 : -100,
       opacity: 0.8, // Start with partial opacity
     }),
@@ -42,7 +42,7 @@ export default function Component() {
       x: 0,
       opacity: 1,
     },
-    exit: (direction:any) => ({
+    exit: (direction: number) => ({
       x: direction > 0 ? -100 : 100,
       opacity: 0.8, // Keep partial opacity during exit
     }),
