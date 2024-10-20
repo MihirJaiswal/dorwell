@@ -56,8 +56,8 @@ export default function Component() {
   };
 
   return (
-    <div className="relative w-full lg:h-screen bg-gradient-to-b from-zinc-50 to-gray-100">
-       <div className="absolute inset-0 opacity-40">
+    <div className="relative w-full  lg:h-screen bg-gradient-to-b from-zinc-50 to-gray-100">
+       {/* <div className="absolute inset-0 opacity-40">
         <Image
           src={images[currentImageIndex]}
           alt="Hero Background"
@@ -65,9 +65,9 @@ export default function Component() {
           quality={100}
           loading='lazy'
         />
-      </div>
+      </div> */}
  
-      <div className="relative z-10 border-b flex flex-col-reverse lg:flex-row items-cnter justify-between h-full">
+      <div className="relative bg-bg1 z-10 border-b flex flex-col-reverse lg:flex-row items-cnter justify-between h-full">
         <div className="lg:w-1/2 border-t w-full lg:h-full flex items-center justify-center py-10 lg:py-0 relative">
           <button
             onClick={handlePrevImage}

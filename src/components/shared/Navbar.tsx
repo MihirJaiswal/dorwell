@@ -1,22 +1,23 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import img from '../../../public/logo.png';
 import { navLinks } from '../../../constant/index';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname(); 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <header className="relative border-b flex flex-wrap sm:justify-start sm:flex-nowrap w-full  shadow-sm text-base py-2 transition-colors duration-300">
+    <header className="relative border-b flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-sm text-base py-2 transition-colors duration-300">
       <nav className="max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
           <a href="#" aria-label="Brand" className="text-2xl font-bold tracking-wide text-black focus:outline-none">
-            <Image src={img} alt="Logo" loading="lazy" placeholder="blur" quality={100} className='w-24' />
+            <Image src={img} alt="Logo" loading="lazy" quality={100} className='w-24' />
           </a>
           <div className="sm:hidden">
             <button
@@ -44,11 +45,20 @@ const Header = () => {
 
         <div className={`${isOpen ? 'block' : 'hidden'} w-full sm:flex sm:items-center sm:w-auto mt-5 sm:mt-0`}>
           <div className="flex flex-col sm:flex-row gap-7 sm:gap-12 text-lg sm:text-base">
-            {navLinks.map((link, index) => (
-              <a key={index} href={link.href} className={`font-medium text-black hover:text-primary transition`}>
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link, index) => {
+              // Check if the current link's href matches the current pathname
+              const isActive = pathname === link.href;
+
+              return (
+                <a
+                  key={index}
+                  href={link.href}
+                  className={`font-medium ${isActive ? 'text-orange-600' : 'text-black'} hover:text-primary transition`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
         </div>
       </nav>
