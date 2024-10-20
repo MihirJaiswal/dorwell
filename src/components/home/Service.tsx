@@ -20,10 +20,10 @@ const ServicesSection = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
               {service[0].title}
             </h2>
-            <p className="mt-4 text-md md:text-lg text-gray-600 dark:text-gray-400">
+            <p className="mt-4 text-md  text-gray-600 dark:text-gray-400">
               {service[0].description}
             </p>
           </div>
@@ -32,10 +32,10 @@ const ServicesSection = () => {
         {/* Second Service Section */}
         <div className="flex items-center gap-10 lg:gap-16 mb-12 flex-col-reverse lg:flex-row">
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
               {service[1].title}
             </h2>
-            <p className="mt-4 text-md md:text-lg text-gray-600 dark:text-gray-400">
+            <p className="mt-4 text-md text-gray-600 dark:text-gray-400">
               {service[1].description}
             </p>
           </div>

@@ -6,9 +6,6 @@ const BentoGridDemo = () => {
   return (
     <div className="border-b">
       <div className="mt-6">
-        <h2 className="text-center text-4xl font-extrabold text-gray-900 mt-10 mb-5">
-          What We Offer
-        </h2>
         <p className="text-center px-4 text-sm md:text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
           We are a door manufacturing company specializing in designer doors. With expertise in membrane, laminate, and veneer doors, we deliver top-notch quality and style.
         </p>
@@ -18,14 +15,14 @@ const BentoGridDemo = () => {
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="relative  bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-transform duration-300"
+            className="relative  bg-white shadow-md rounded overflow-hidden hover:shadow-2xl transition-transform duration-300"
           >
             <Image
               src={feature.image}
               alt={feature.title}
-              className="w-full h-96 md:h-full object-cover "
-              width={500}
-              height={500}
+              className="w-full h-72 md:h-full object-cover "
+              width={1000}
+              height={1000}
               quality={100}
               loading="lazy"
             />

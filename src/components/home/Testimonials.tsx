@@ -34,11 +34,11 @@ const Testimonials = () => {
       style={{ backgroundImage: "url('/images/wood-texture.jpg')" }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-bg1 bg-cover bg-opacity-55"></div>
+      <div className="absolute inset-0 bg-cover bg-opacity-55"></div>
 
       <div className="relative w-full max-w-6xl bg-white bg-opacity-80 backdrop-blur-md border border-gray-300 p-10 md:py-16 text-gray-800">
         <div className="text-center mx-auto mb-12">
-          <h1 className="text-3xl lg:text-5xl font-extrabold mb-5 text-gray-900">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5 text-gray-900">
             What People Are Saying
           </h1>
           <h3 className="text-xl mb-5 font-light text-gray-700">

@@ -56,18 +56,8 @@ export default function Component() {
   };
 
   return (
-    <div className="relative w-full  lg:h-screen bg-gradient-to-b from-zinc-50 to-gray-100">
-       {/* <div className="absolute inset-0 opacity-40">
-        <Image
-          src={images[currentImageIndex]}
-          alt="Hero Background"
-          className="w-full h-full object-cover"
-          quality={100}
-          loading='lazy'
-        />
-      </div> */}
- 
-      <div className="relative bg-bg1 z-10 border-b flex flex-col-reverse lg:flex-row items-cnter justify-between h-full">
+    <div className="relative w-full max-w-7xl mx-auto">
+      <div className="relative  z-10 border-b flex flex-col-reverse lg:flex-row items-cnter justify-between h-full">
         <div className="lg:w-1/2 border-t w-full lg:h-full flex items-center justify-center py-10 lg:py-0 relative">
           <button
             onClick={handlePrevImage}
@@ -76,7 +66,7 @@ export default function Component() {
             <ArrowLeft className="h-6 w-6" />
           </button>
 
-          <div className="relative w-[90%] h-[300px] lg:h-[600px] overflow-hidden">
+          <div className="w-[90%] h-[300px] lg:h-[530px] mt-12 overflow-hidden">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentImageIndex}
@@ -100,7 +90,7 @@ export default function Component() {
             <ArrowRight className="h-6 w-6" />
           </button>
         </div>
-       <HeroWord/>
+      
       </div> 
     </div>
   );

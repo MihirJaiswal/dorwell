@@ -13,8 +13,9 @@ export default function page() {
     <div className='flex flex-col'>
       <Header/>
       <BannerComponent/>
-      <BentoGridDemo/>
       <AboutUs/>
+      <BentoGridDemo/>
+      
       <Process/>
       <ServicesSection/>
       <Testimonials/>

@@ -9,29 +9,24 @@ import {
 } from "@/components/ui/carousel-extended";
 import Image from "next/image";
 import { craftSteps } from "../../../constant";
-import img from '../../../public/process/process1.jpg'
+import img from '../../../public/process/process1.jpg';
 
 export function Process() {
   return (
-    <div className="relative border-t border-b border-gray-400"> {/* Set the parent div to relative */}
-      <div className="absolute inset-0 z-0 opacity-30 "> {/* Use z-0 to place it behind the text */}
-        <Image
-          src={img}
-          alt="Hero Background"
-          className="w-full h-full object-cover"
-          quality={100}
-        />
-      </div>
-      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 mt-10 mb-2 relative z-10"> {/* Add z-10 to keep the title above the background */}
-        What We Offer
+    <div className="relative border-t border-b border-gray-200 py-12 bg-gray-50"> {/* Add padding and background color */}
+      <h2 className="max-w-7xl mx-auto text-4xl font-bold text-gray-900 mt-10 mb-4 relative z-10 text-center"> {/* Center align title */}
+        Our Manufacturing Process
       </h2>
-      <Carousel orientation="vertical" className="flex items-center justify-center gap-2 my-12 relative z-10"> {/* Add relative z-10 to the carousel */}
+      <p className="max-w-6xl mx-auto text-gray-600 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center mb-10">
+        Welcome to Dorwell, a leading door manufacturer with premier locations in Indore and Guna. Spanning 70,000 square feet, we blend craftsmanship and innovation to create high-quality doors for residential and commercial spaces. Our skilled craftsmen utilize traditional techniques and modern innovations, ensuring precision and attention to detail in every door. Discover the perfect blend of style and durability with Dorwell. Welcome to a world where every door opens to possibility.
+      </p>
+      <Carousel orientation="vertical" className="flex items-center justify-center gap-4 relative z-10"> {/* Adjusted gap */}
         <div className="relative basis-3/4">
-          <CarouselMainContainer className="h-96">
+          <CarouselMainContainer className="h-[28rem]">
             {craftSteps.map((step, index) => (
               <SliderMainItem
                 key={index}
-                className="flex h-full items-center justify-center rounded-md border border-muted relative overflow-hidden" // Adjusted styles
+                className="flex h-full items-center justify-center rounded-lg border border-gray-300 shadow-md relative overflow-hidden transition-transform duration-300 transform hover:scale-105" // Added shadow and hover scale effect
               >
                 <Image
                   src={step.image}
@@ -49,15 +44,15 @@ export function Process() {
             ))}
           </CarouselMainContainer>
         </div>
-        <CarouselThumbsContainer className="h-60 basis-1/4">
+        <CarouselThumbsContainer className="h-[28rem] bg-bg1 basis-1/4">
           {craftSteps.map((_, index) => (
             <SliderThumbItem
               key={index}
               index={index}
               className="rounded-md bg-transparent"
             >
-              <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-muted bg-background transition-colors duration-300 hover:bg-gray-200 border-gray-400">
-                Process {index + 1}
+              <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-white transition-colors duration-300 hover:bg-gray-200 shadow-md"> 
+                <span className="text-gray-800 font-medium">Process {index + 1}</span>
               </span>
             </SliderThumbItem>
           ))}
