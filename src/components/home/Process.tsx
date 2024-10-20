@@ -1,5 +1,4 @@
 'use client';
-
 import {
   Carousel,
   CarouselMainContainer,
@@ -9,7 +8,6 @@ import {
 } from "@/components/ui/carousel-extended";
 import Image from "next/image";
 import { craftSteps } from "../../../constant";
-import img from '../../../public/process/process1.jpg';
 
 export function Process() {
   return (

@@ -15,7 +15,7 @@ export default function HeroSection() {
   const images = [img, img1, img2, img3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled] = useState(false);
 
   const handlePrevImage = () => {
     setDirection(-1);
@@ -71,7 +71,7 @@ export default function HeroSection() {
         <span className="inline-block">Space</span>
     </h1>
   <p className="mt-4 sm:mt-6 text-base md:text-xl text-gray-800 max-w-xl mx-auto lg:mx-0">
-    Elevate your space with our premium, custom-crafted doors. From classic designs to modern innovations, we're redefining entrances one door at a time.
+    Elevate your space with our premium, custom-crafted doors. From classic designs to modern innovations, we are redefining entrances one door at a time.
   </p>
   <div className="mt-6 sm:mt-8 flex flex-row items-center justify-center lg:justify-start space-x-4">
     <Button 

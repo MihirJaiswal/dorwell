@@ -15,7 +15,6 @@ export default function page() {
       <BannerComponent/>
       <AboutUs/>
       <BentoGridDemo/>
-      
       <Process/>
       <ServicesSection/>
       <Testimonials/>
