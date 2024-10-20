@@ -187,7 +187,7 @@ Carousel.displayName = "Carousel";
 const CarouselMainContainer = forwardRef<
   HTMLDivElement,
   {} & React.HTMLAttributes<HTMLDivElement>
->(({ className, dir, children, ...props }, ref) => {
+>(({ className, children, ...props }, ref) => {
   const { mainRef, orientation, direction } = useCarousel();
  
   return (
@@ -211,7 +211,7 @@ CarouselMainContainer.displayName = "CarouselMainContainer";
 const CarouselThumbsContainer = forwardRef<
   HTMLDivElement,
   {} & React.HTMLAttributes<HTMLDivElement>
->(({ className, dir, children, ...props }, ref) => {
+>(({ className, children, ...props }, ref) => {
   const { thumbsRef, orientation, direction } = useCarousel();
  
   return (
@@ -290,7 +290,7 @@ SliderThumbItem.displayName = "SliderThumbItem";
 const CarouselIndicator = forwardRef<
   HTMLButtonElement,
   { index: number } & React.ComponentProps<typeof Button>
->(({ className, index, children, ...props }, ref) => {
+>(({  index, ...props }, ref) => {
   const { activeIndex, onThumbClick } = useCarousel();
   const isSlideActive = activeIndex === index;
   return (
@@ -300,7 +300,6 @@ const CarouselIndicator = forwardRef<
       className={cn(
         "h-1 w-6 rounded-full",
         "data-[active='false']:bg-primary/50 data-[active='true']:bg-primary",
-        className,
       )}
       data-active={isSlideActive}
       onClick={() => onThumbClick(index)}
@@ -316,7 +315,7 @@ CarouselIndicator.displayName = "CarouselIndicator";
 const CarouselPrevious = forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, dir, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { canScrollNext, canScrollPrev, scrollNext, scrollPrev, orientation, direction } =
     useCarousel();
  
@@ -346,7 +345,7 @@ const CarouselPrevious = forwardRef<
 CarouselPrevious.displayName = "CarouselPrevious";
  
 const CarouselNext = forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
-  ({ className, dir, variant = "outline", size = "icon", ...props }, ref) => {
+  ({ className, variant = "outline", size = "icon", ...props }, ref) => {
     const {
       canScrollNext,
       canScrollPrev,
