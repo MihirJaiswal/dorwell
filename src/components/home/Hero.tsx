@@ -174,7 +174,7 @@ export default function HeroSection() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-8 left-28 md:left-1/2  transform -translate-x-1/2 z-20 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isScrolled ? 0 : 1, y: isScrolled ? 20 : 0 }}
         transition={{ duration: 0.3 }}
