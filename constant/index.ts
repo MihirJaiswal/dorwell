@@ -160,15 +160,6 @@ export const navLinks = [
         { text: "User Guide", href: "javascript:;" },
       ],
     },
-    {
-      title: "Blogs",
-      links: [
-        { text: "Item 1", href: "javascript:;" },
-        { text: "Item 2", href: "javascript:;" },
-        { text: "New Updates", href: "javascript:;" },
-        { text: "Events", href: "javascript:;" },
-      ],
-    },
   ];
 
 

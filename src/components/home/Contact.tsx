@@ -68,7 +68,7 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 rounded-lg transition duration-300 font-semibold text-lg"
+                className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg transition duration-300 font-semibold text-lg"
               >
                 Open the Door
               </button>
@@ -82,25 +82,28 @@ const ContactSection = () => {
             <h3 className="text-3xl font-semibold text-gray-800 mb-4 mt-10">
               Contact Information
             </h3>
-            <div className="bg-white p-4 rounded-lg">
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center space-x-4 mb-2">
-                  <span className="text-orange-600 text-lg font-medium">
-                    {contact.label}:
-                  </span>
-                  {contact.link ? (
-                    <a
-                      href={contact.link}
-                      className="text-gray-700 hover:text-indigo-500 transition"
-                    >
-                      {contact.value}
-                    </a>
-                  ) : (
-                    <span className="text-gray-700">{contact.value}</span>
-                  )}
-                </div>
-              ))}
-            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-sm">
+  {contactInfo.map((contact, index) => (
+    <div key={index} className="flex items-center space-x-4 mb-4">
+      <span className="text-red-600 text-lg font-semibold">
+        {contact.label}:
+      </span>
+      {contact.link ? (
+        <a
+          href={contact.link}
+          className="text-gray-800 hover:text-indigo-600 transition duration-200 transform hover:scale-105"
+          target="_blank"
+          rel="noopener noreferrer" // Added for better security
+        >
+          {contact.value}
+        </a>
+      ) : (
+        <span className="text-gray-700">{contact.value}</span>
+      )}
+    </div>
+  ))}
+</div>
+
 
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">

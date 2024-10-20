@@ -16,7 +16,7 @@ const AboutUs = () => {
                 <h2 className="text-gray-900 text-3xl md:text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
                 Open the door to a world of endless possibilities.
                 </h2>
-                <p className="text-gray-500 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center">
+                <p className="text-gray-500 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center px-2">
                   Welcome to Dorwell, a leading door manufacturer with premier locations in Indore and Guna. Spanning 70,000 square feet, we blend craftsmanship and innovation to create high-quality doors for residential and commercial spaces. Our skilled craftsmen utilize traditional techniques and modern innovations, ensuring precision and attention to detail in every door. Discover the perfect blend of style and durability with Dorwell. Welcome to a world where every door opens to possibility.
                 </p>
               </div>

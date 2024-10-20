@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
             <a
               href="javascript:;"
-              className="py-2.5 px-5 h-9 block w-fit bg-orange-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all duration-500 hover:bg-orange-700 lg:mx-0"
+              className="py-2.5 px-5 h-9 block w-fit bg-red-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all duration-500 hover:bg-orange-700 lg:mx-0"
             >
               Contact us
             </a>
@@ -61,7 +61,7 @@ const Footer = () => {
                 <a
                   key={idx}
                   href={icon.href}
-                  className="w-9 h-9 rounded-full bg-gray-300 flex justify-center items-center hover:bg-orange-600"
+                  className="w-9 h-9 rounded-full bg-gray-300 flex justify-center items-center hover:bg-red-600"
                 >
                   {icon.component}
                 </a>

@@ -45,11 +45,11 @@ const Testimonials = () => {
             Hear from our happy customers and partners.
           </h3>
           <div className="text-center">
-            <span className="inline-block w-1 h-1 rounded-full bg-yellow-600 ml-1"></span>
-            <span className="inline-block w-3 h-1 rounded-full bg-yellow-600 ml-1"></span>
-            <span className="inline-block w-40 h-1 rounded-full bg-yellow-600"></span>
-            <span className="inline-block w-3 h-1 rounded-full bg-yellow-600 ml-1"></span>
-            <span className="inline-block w-1 h-1 rounded-full bg-yellow-600 ml-1"></span>
+            <span className="inline-block w-1 h-1 rounded-full bg-red-600 ml-1"></span>
+            <span className="inline-block w-3 h-1 rounded-full bg-red-600 ml-1"></span>
+            <span className="inline-block w-40 h-1 rounded-full bg-red-600"></span>
+            <span className="inline-block w-3 h-1 rounded-full bg-red-600 ml-1"></span>
+            <span className="inline-block w-1 h-1 rounded-full bg-red-600 ml-1"></span>
           </div>
         </div>
 

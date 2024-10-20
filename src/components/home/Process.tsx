@@ -17,10 +17,10 @@ export function Process() {
       <h2 className="max-w-7xl mx-auto text-4xl font-bold text-gray-900 mt-10 mb-4 relative z-10 text-center"> {/* Center align title */}
         Our Manufacturing Process
       </h2>
-      <p className="max-w-6xl mx-auto text-gray-600 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center mb-10">
-        Welcome to Dorwell, a leading door manufacturer with premier locations in Indore and Guna. Spanning 70,000 square feet, we blend craftsmanship and innovation to create high-quality doors for residential and commercial spaces. Our skilled craftsmen utilize traditional techniques and modern innovations, ensuring precision and attention to detail in every door. Discover the perfect blend of style and durability with Dorwell. Welcome to a world where every door opens to possibility.
+      <p className="max-w-6xl mx-auto px-16 text-gray-600 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center mb-10">
+      Our Manufacturing Process ensures that every stage, from design to production, is carefully executed for superior quality and innovation.
       </p>
-      <Carousel orientation="vertical" className="flex items-center justify-center gap-4 relative z-10"> {/* Adjusted gap */}
+      <Carousel orientation="vertical" className="flex max-w-7xl mx-auto items-center justify-center gap-4 relative z-10"> {/* Adjusted gap */}
         <div className="relative basis-3/4">
           <CarouselMainContainer className="h-[28rem]">
             {craftSteps.map((step, index) => (
@@ -44,7 +44,7 @@ export function Process() {
             ))}
           </CarouselMainContainer>
         </div>
-        <CarouselThumbsContainer className="h-[28rem] bg-bg1 basis-1/4">
+        <CarouselThumbsContainer className="h-[28rem] basis-1/4">
           {craftSteps.map((_, index) => (
             <SliderThumbItem
               key={index}
