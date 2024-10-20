@@ -13,8 +13,6 @@ import {
 } from "react";
  
 import { cn } from '../../lib/utils';
-import ChevronLeft from "react-icons";
-import ChevronRight from "react-icons";
 import { Button } from "@/components/ui/button";
  
 type CarouselContextProps = {
@@ -329,25 +327,27 @@ const CarouselIndicator = forwardRef<
 >(({ className, index, children, ...props }, ref) => {
   const { activeIndex, onThumbClick } = useCarousel();
   const isSlideActive = activeIndex === index;
+
   return (
     <Button
       ref={ref}
       size="icon"
       className={cn(
-        "h-1 w-6 rounded-full",
-        "data-[active='false']:bg-primary/50 data-[active='true']:bg-primary",
-        className,
+        "h-1 w-6 rounded-full transition-colors",
+        isSlideActive ? "bg-primary" : "bg-primary/50",
+        className
       )}
-      data-active={isSlideActive}
       onClick={() => onThumbClick(index)}
+      data-active={isSlideActive}
       {...props}
     >
-      <span className="sr-only">slide {index + 1} </span>
+      {children}
     </Button>
   );
 });
- 
+
 CarouselIndicator.displayName = "CarouselIndicator";
+
  
 const CarouselPrevious = forwardRef<
   HTMLButtonElement,

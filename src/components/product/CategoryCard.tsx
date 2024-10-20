@@ -3,7 +3,20 @@ import Image from 'next/image';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-const CategoryCard = ({ category }: any) => {
+// Define the Category interface
+interface Category {
+    id: string; // Changed from number to string
+    name: string;
+    description: string;
+    image: string;
+}
+
+// Define the props for the CategoryCard component
+interface CategoryCardProps {
+    category: Category; // Use the Category interface
+}
+
+const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
     const router = useRouter();
 
     const handleClick = () => {
@@ -22,7 +35,7 @@ const CategoryCard = ({ category }: any) => {
             </div>
 
             {/* Title, Description, and Button in Bottom Left Corner */}
-            <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t  from-black/60 to-transparent w-full text-left text-white">
+            <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 to-transparent w-full text-left text-white">
                 <h2 className="text-xl font-semibold">{category.name}</h2>
                 <p className="text-sm mb-2">{category.description}</p>
                 <button

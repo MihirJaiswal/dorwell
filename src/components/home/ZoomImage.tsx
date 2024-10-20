@@ -2,8 +2,10 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
+import { StaticImageData } from "next/image"; // Import StaticImageData
 
-const ZoomedImage = ({ className, imgSrc }: { className?: string; imgSrc: any }) => {
+// Update the imgSrc type to allow both string and StaticImageData
+const ZoomedImage = ({ className, imgSrc }: { className?: string; imgSrc: string | StaticImageData }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

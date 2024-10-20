@@ -2,6 +2,13 @@ import React from "react";
 import { testimonialsData } from "../../../constant";
 import Image from "next/image";
 
+interface Testimonial {
+  image: string;
+  name: string;
+  text: string;
+  rating: number;
+}
+
 const StarRating = ({ rating }: { rating: number }) => {
   return (
     <div className="flex space-x-1 mt-3">
@@ -22,14 +29,15 @@ const StarRating = ({ rating }: { rating: number }) => {
 
 const Testimonials = () => {
   return (
-    <div className="relative min-w-screen min-h-screen bg-cover bg-center flex items-center justify-center " 
-         style={{ backgroundImage: "url('/images/wood-texture.jpg')" }}
+    <div
+      className="relative min-w-screen min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{ backgroundImage: "url('/images/wood-texture.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-bg1 bg-cover bg-opacity-55"></div>
 
-      <div className="relative w-full max-w-6xl bg-white bg-opacity-80 backdrop-blur-md border border-gray-300 p-10 md:py-16 text-gray-800 ">
-        <div className="text-center  mx-auto mb-12">
+      <div className="relative w-full max-w-6xl bg-white bg-opacity-80 backdrop-blur-md border border-gray-300 p-10 md:py-16 text-gray-800">
+        <div className="text-center mx-auto mb-12">
           <h1 className="text-3xl lg:text-5xl font-extrabold mb-5 text-gray-900">
             What People Are Saying
           </h1>
@@ -46,7 +54,7 @@ const Testimonials = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonialsData.map((testimonial, index) => (
+          {testimonialsData.map((testimonial: Testimonial, index: number) => (
             <div
               key={index}
               className="transform hover:scale-105 transition-transform duration-300 rounded-lg bg-white shadow-lg p-6"
@@ -58,6 +66,7 @@ const Testimonials = () => {
                     height={100}
                     src={testimonial.image}
                     alt={testimonial.name}
+                    loading="lazy" // Use lazy loading for images
                   />
                 </div>
                 <div className="pl-4">
