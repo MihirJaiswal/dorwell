@@ -99,16 +99,24 @@ const Carousel = forwardRef<HTMLDivElement, CarouselContextProps & React.HTMLAtt
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         event.preventDefault();
         if (!emblaMainApi) return;
-
+    
         switch (event.key) {
           case "ArrowLeft":
             if (orientation === "horizontal") {
-              direction === "rtl" ? scrollNext() : scrollPrev();
+              if (direction === "rtl") {
+                scrollNext();
+              } else {
+                scrollPrev();
+              }
             }
             break;
           case "ArrowRight":
             if (orientation === "horizontal") {
-              direction === "rtl" ? scrollPrev() : scrollNext();
+              if (direction === "rtl") {
+                scrollPrev();
+              } else {
+                scrollNext();
+              }
             }
             break;
           case "ArrowUp":
