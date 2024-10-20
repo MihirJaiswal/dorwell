@@ -59,7 +59,7 @@ export default function HeroSection() {
       <motion.div 
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
+  transition={{ duration: 0.2, delay: 0.1 }}
   className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 flex flex-col justify-center px-8"
 >
 <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl">

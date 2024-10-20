@@ -2,10 +2,11 @@
 import Image from 'next/image';
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { ChevronRightIcon } from 'lucide-react';
 
 // Define the Category interface
 interface Category {
-    id: string; // Changed from number to string
+    id: string;
     name: string;
     description: string;
     image: string;
@@ -13,36 +14,42 @@ interface Category {
 
 // Define the props for the CategoryCard component
 interface CategoryCardProps {
-    category: Category; // Use the Category interface
+    category: Category;
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push(`/products/${category.id}`); // Navigate to dynamic route
+        router.push(`/products/${category.id}`);
     };
 
     return (
-        <div className="relative max-w-sm h-96 rounded-lg overflow-hidden border shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl">
-            <div className="relative h-full">
+        <div className="max-w-sm border rounded-md overflow-hidden border-gray-300">
+            {/* Image at the Top */}
+            <div className="relative w-full h-64">
                 <Image
                     src={category.image}
                     alt={category.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                    loading='lazy'
                 />
             </div>
 
-            {/* Title, Description, and Button in Bottom Left Corner */}
-            <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 to-transparent w-full text-left text-white">
-                <h2 className="text-xl font-semibold">{category.name}</h2>
-                <p className="text-sm mb-2">{category.description}</p>
+            {/* Text Content Below the Image */}
+            <div className="px-4 py-2 flex flex-col items-start ">
+                <h2 className="text-lg font-semibold text-gray-800">{category.name}</h2>
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                    {category.description}
+                </p>
                 <button
                     onClick={handleClick}
-                    className="px-4 py-2 bg-white text-black rounded-md hover:bg-orange-600 text-sm"
+                    className=" px-4 py-3 text-black border flex rounded-md hover:bg-red-600 hover:text-white transition-colors"
                 >
                     View Category
+                    <ChevronRightIcon/>
                 </button>
             </div>
         </div>

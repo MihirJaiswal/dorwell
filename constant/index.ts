@@ -233,7 +233,7 @@ export const navLinks = [
     {
         id: 'groove-line-series',
         name: 'Groove Line Series',
-        description: 'Embrace the smoothness and sharp finish in best quality laminate.',
+        description: 'Embrace the smoothness and sharp finish.',
         image: '/categories/category5.webp', 
         catalogImages: [
             '/catalogs/groove1.webp',

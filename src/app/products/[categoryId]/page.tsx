@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { categories } from '../../../../constant'; // Ensure this is the correct import path
+import { categories } from '../../../../constant'; 
 import Header from '@/components/shared/Navbar';
+import Footer from '@/components/shared/Footer';
 import {
     Carousel,
     CarouselMainContainer,
@@ -11,47 +12,37 @@ import {
     SliderMainItem,
     SliderThumbItem,
 } from "@/components/ui/carousel-extended";
-import Footer from '@/components/shared/Footer';
 import Image from 'next/image';
 
 // Lightbox Component
-const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () => void; imageSrc: string }) => {
-    return (
-        <div
-            className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-            onClick={onClose}
-        >
-            <span className="absolute top-4 right-4 text-white text-3xl cursor-pointer" onClick={onClose}>&times;</span>
-            <Image 
-                src={imageSrc} 
-                alt="" className="lightbox-image"
-                width={1000}
-                height={1000}
-            />
-        </div>
-    );
-};
+const Lightbox = ({ isOpen, onClose, imageSrc }: { isOpen: boolean; onClose: () => void; imageSrc: string }) => (
+    <div
+        className={`fixed inset-0 bg-black/80 flex justify-center items-center transition-all duration-300 ${
+            isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
+        }`}
+        onClick={onClose}
+    >
+        <span className="absolute top-6 right-6 text-white text-4xl font-bold cursor-pointer" onClick={onClose}>
+            &times;
+        </span>
+        <Image src={imageSrc} alt="Lightbox" width={1000} height={1000} loading='lazy' className="rounded-lg shadow-lg" />
+    </div>
+);
 
 // CategoryPage Component
 const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
     const categoryId = params.categoryId;
-
-    // Find the category data based on the ID
     const category = categories.find((cat) => cat.id === categoryId);
 
-    // State for lightbox
     const [isLightboxOpen, setLightboxOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string>('');
 
-    // Function to handle catalog download
     const handleDownload = () => {
         if (category?.catalogUrl) {
             const link = document.createElement('a');
             link.href = category.catalogUrl;
             link.download = `${category.name}-catalog.pdf`;
-            document.body.appendChild(link);
             link.click();
-            document.body.removeChild(link);
         }
     };
 
@@ -65,72 +56,74 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
         setSelectedImage('');
     };
 
-    // Render the component, including error handling for missing category
     return (
         <>
             <Header />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="max-w-7xl mx-auto px-6 py-10">
                 {category ? (
                     <>
-                        <h1 className="text-5xl font-bold text-gray-800 mb-4">{category.name}</h1>
-                        <p className="text-lg text-gray-600 mb-6">{category.description}</p>
-                        <div className='flex flex-col lg:flex-row justify-center items-center lg:space-x-20'>
-                            {/* Category Title and Description */}
-                            <div className="mb-8">
-                                <Image
-                                    src={category.image}
-                                    alt={category.name}
-                                    width={500}
-                                    height={500}
-                                    className="w-full max-w-xl rounded-lg shadow-lg mb-6"
-                                />
-                            </div>
+                        <div className="text-center mb-12">
+                            <h1 className="text-5xl font-extrabold text-gray-800 mb-4">{category.name}</h1>
+                            <p className="text-lg text-gray-600">{category.description}</p>
+                        </div>
 
-                            {/* Catalog Section */}
-                            <div className="mb-8">
-                                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="flex flex-col lg:flex-row gap-12 mb-16">
+                            <Image
+                                src={category.image}
+                                alt={category.name}
+                                width={500}
+                                loading='lazy'
+                                height={500}
+                                className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                            />
+
+                            <div className="flex flex-col items-start space-y-6">
+                                <h2 className="text-3xl font-semibold text-gray-800">Explore the Catalog</h2>
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                                     {category.catalogImages.map((image, index) => (
-                                        <div key={index} className="relative overflow-hidden rounded-lg shadow-lg group transition duration-300 ease-in-out">
+                                        <div
+                                            key={index}
+                                            className="relative rounded-lg shadow-lg overflow-hidden group cursor-pointer"
+                                            onClick={() => openLightbox(image)}
+                                        >
                                             <Image
                                                 src={image}
                                                 alt={`Catalog ${index + 1}`}
                                                 width={300}
                                                 height={300}
-                                                className="w-full h-60 object-cover rounded-lg group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                                                onClick={() => openLightbox(image)} // Open lightbox on click
+                                                loading='lazy'
+                                                className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"
                                             />
                                         </div>
                                     ))}
                                 </div>
+
                                 <button
                                     onClick={handleDownload}
-                                    className="mt-6 px-6 py-3 bg-orange-600 text-white rounded-lg shadow hover:bg-orange-700 transition duration-200"
+                                    className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition-all"
                                 >
-                                    Download full Catalog
+                                    Download Full Catalog
                                 </button>
                             </div>
                         </div>
 
-                        {/* Room Background Section with Carousel */}
-                        <div>
-                            <h2 className="text-4xl font-bold text-gray-800 mb-4">Room Inspirations</h2>
-                            <Carousel>
-                                <CarouselNext className="top-1/3 -translate-y-1/3" />
-                                <CarouselPrevious className="top-1/3 -translate-y-1/3" />
-                                <CarouselMainContainer className="h-full">
+                        <div className="mb-16">
+                            <h2 className="text-4xl font-bold text-gray-800 mb-6">Room Inspirations</h2>
+                            <Carousel className='lg:flex flex-col items-start lg:w-1/2'>
+                                <CarouselMainContainer className="h-full lg:h-[28rem] ">
                                     {category.roomImages.map((image, index) => (
                                         <SliderMainItem key={index} className="bg-transparent">
-                                            <div className="flex size-full items-center justify-center rounded-xl bg-background outline outline-1 outline-border">
+                                            <div className="rounded-xl overflow-hidden">
                                                 <Image
-                                                    src={image} 
+                                                    src={image}
                                                     width={600}
-                                                    height={600}                                        
+                                                    height={600}
                                                     quality={100}
-                                                    loading='lazy'
-                                                    alt={`Room Background ${index + 1}`} 
-                                                    className="w-full h-full object-cover rounded-xl cursor-pointer" 
-                                                    onClick={() => openLightbox(image)} // Open lightbox on click
+                                                    loading="lazy"
+                                                    alt={`Room ${index + 1}`}
+                                                    className="w-full h-full lg:h-[28rem] object-contain cursor-pointer"
+                                                    onClick={() => openLightbox(image)}
                                                 />
                                             </div>
                                         </SliderMainItem>
@@ -139,33 +132,32 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
                                 <CarouselThumbsContainer>
                                     {category.roomImages.map((image, index) => (
                                         <SliderThumbItem key={index} index={index} className="bg-transparent">
-                                            <div className="flex size-full items-center justify-center rounded-xl bg-background outline outline-1 outline-border">
+                                            <div className="rounded-lg overflow-hidden">
                                                 <Image
-                                                    src={image} 
+                                                    src={image}
                                                     width={100}
                                                     height={100}
-                                                    alt={`Room Background Thumbnail ${index + 1}`} 
-                                                    className="w-16 h-16 object-cover rounded-xl cursor-pointer" 
+                                                    loading='lazy'
+                                                    alt={`Thumbnail ${index + 1}`}
+                                                    className="w-16 h-16 object-cover"
                                                 />
                                             </div>
                                         </SliderThumbItem>
                                     ))}
                                 </CarouselThumbsContainer>
+                                <CarouselNext className="top-1/3 -translate-y-1/3" />
+                                <CarouselPrevious className="top-1/3 -translate-y-1/3" />
                             </Carousel>
                         </div>
 
-                        {/* Lightbox for Images */}
-                        <Lightbox
-                            isOpen={isLightboxOpen}
-                            onClose={closeLightbox}
-                            imageSrc={selectedImage}
-                        />
+                        <Lightbox isOpen={isLightboxOpen} onClose={closeLightbox} imageSrc={selectedImage} />
                     </>
                 ) : (
-                    <p className="text-center text-2xl mt-10">Category not found!</p>
+                    <p className="text-center text-2xl mt-20 text-gray-500">Category not found!</p>
                 )}
             </div>
-            <Footer/>
+
+            <Footer />
         </>
     );
 };

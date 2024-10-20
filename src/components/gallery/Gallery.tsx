@@ -56,6 +56,7 @@ const Gallery: React.FC = () => {
                   width={500}
                   height={500}
                   alt="Gallery image"
+                  loading='lazy'
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-4 md:col-span-6 w-full h-full cursor-pointer"
                   onClick={() => openLightbox(images[0])}
                 />
@@ -65,6 +66,7 @@ const Gallery: React.FC = () => {
                   src={images[1]}
                   width={500}
                   height={500}
+                  loading='lazy'
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-8 md:col-span-6 w-full h-full cursor-pointer"
                   onClick={() => openLightbox(images[1])}
@@ -78,6 +80,7 @@ const Gallery: React.FC = () => {
                     src={src}
                     width={500}
                     height={500}
+                    loading='lazy'
                     alt="Gallery image"
                     className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto w-full h-full cursor-pointer"
                     onClick={() => openLightbox(src)}

@@ -8,7 +8,6 @@ function page() {
   return (
     <div>
         <Header/> 
-        <HeroSection/>
         <CategorySection/>
         <Footer/>
     </div>
