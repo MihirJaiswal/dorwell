@@ -101,7 +101,7 @@ const CategoryPage = ({ params }: { params: { categoryId: string } }) => {
 
                                 <button
                                     onClick={handleDownload}
-                                    className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow hover:bg-orange-700 transition-all"
+                                    className="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow hover:bg-red-700 transition-all"
                                 >
                                     Download Full Catalog
                                 </button>
