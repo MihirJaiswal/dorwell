@@ -283,7 +283,7 @@ const SliderThumbItem = forwardRef<
       )}
     >
       <div
-        className={`relative aspect-square h-20 w-full rounded-md opacity-40 transition-opacity ${
+        className={`relative aspect-square h-20 w-full rounded-md opacity-50 transition-opacity ${
           isSlideActive ? "!opacity-100" : ""
         }`}
       >
