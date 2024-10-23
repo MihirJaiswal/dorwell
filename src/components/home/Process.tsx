@@ -38,7 +38,7 @@ export function Process() {
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
         <span
-          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-red-600 transition-colors duration-300 hover:bg-red-400 shadow-md"
+          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-gray-900 transition-colors duration-300 hover:bg-red-400 shadow-md"
           tabIndex={0} // Make it focusable for keyboard navigation
           aria-label={`Go to step ${index + 1}`} // Accessible label for thumbnails
         >
