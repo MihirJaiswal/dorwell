@@ -7,10 +7,10 @@ import { footerSections } from "../../../constant";
 const Footer = () => {
 
   const socialIcons = [
-    { component: <FaFacebookF />, href: "js" },
-    { component: <FaTwitter />, href: "ts" },
-    { component: <FaInstagram />, href: "html" },
-    { component: <FaLinkedinIn />, href: "css" },
+    { component: <FaFacebookF />, href: "https://nextjs.org/" },
+    { component: <FaTwitter />, href: "https://react-icons.github.io/react-icons/" },
+    { component: <FaInstagram />, href: "https://vercel.com/" },
+    { component: <FaLinkedinIn />, href: "https://chatgpt.com/" },
   ];
 
   return (
