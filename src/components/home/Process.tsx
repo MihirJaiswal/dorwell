@@ -37,8 +37,8 @@ export function Process() {
   const renderThumbnails = () =>
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
-        <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-white transition-colors duration-300 hover:bg-gray-200 shadow-md">
-          <span className="text-black font-medium">Process {index + 1}</span>
+        <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-red-600 transition-colors duration-300 hover:bg-gray-200 shadow-md">
+          <span className="text-white font-medium">Process {index + 1}</span>
         </span>
       </SliderThumbItem>
     ));
