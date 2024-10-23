@@ -116,12 +116,12 @@ export const navLinks = [
   
   export const contactInfo = [
     {
-      label: "Email",
+      label: "Email id",
       value: "decologic.ind@gmail.com",
       link: "mailto:decologic.ind@gmail.com",
     },
     {
-      label: "Phone",
+      label: "Phone no",
       value: "+91-9425131031",
       link: "tel:+919425131031",
     },
