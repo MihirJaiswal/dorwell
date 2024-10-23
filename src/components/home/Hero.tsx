@@ -20,14 +20,15 @@ export default function HeroSection() {
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl">
             <span className="inline-block">Elevate 
               <span className="relative whitespace-nowrap text-red-600">
-                <svg
+              <svg
                   aria-hidden="true"
                   viewBox="0 0 418 42"
                   className="absolute top-2/3 left-0 h-[0.58em] w-full fill-red-300/70"
                   preserveAspectRatio="none"
                 >
-                  <path d="M203.371.916c-26.013-2.078-76.686..."></path>
+                  <path d="M203.371 0.916 C 176.758 -1.162 125.687 2.78 100.643 9.08 C 75.599 15.38 50.555 29.56 36.235 35.37 Z" />
                 </svg>
+
                 <span className="relative"> your</span>
               </span>
             </span>

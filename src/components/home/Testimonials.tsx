@@ -29,9 +29,7 @@ const StarRating = ({ rating }: { rating: number }) => {
 const Testimonials = () => {
   return (
     <div
-      className="relative min-w-screen min-h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/images/wood-texture.jpg')" }}
-    >
+      className="relative min-w-screen min-h-screen bg-cover bg-center flex items-center justify-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-cover bg-opacity-55"></div>
 
