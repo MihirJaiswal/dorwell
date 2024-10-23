@@ -38,11 +38,11 @@ export function Process() {
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
         <span
-          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-500 bg-gray-800 hover:bg-red-500 transition-colors duration-300 shadow-md focus:ring-2 focus:ring-red-500"
+          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-500 bg-black transition-colors duration-300 shadow-md focus:ring-2 focus:ring-gray-900"
           tabIndex={0} // Ensure keyboard accessibility
           aria-label={`Go to step ${index + 1}`}
         >
-          <span className="text-white font-medium p-2">Step {index + 1}</span>
+          <span className="text-white font-medium p-2 bg-black">Step {index + 1}</span>
         </span>
       </SliderThumbItem>
     ));
