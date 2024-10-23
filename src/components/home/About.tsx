@@ -22,15 +22,15 @@ const AboutUs = () => {
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
                 <div className="flex-col justify-start items-start inline-flex">
                   <h3 className="text-red-600 text-4xl font-bold font-manrope leading-normal">33+</h3>
-                  <h6 className="text-gray-500 text-base font-normal leading-relaxed">Years of Experience</h6>
+                  <h4 className="text-gray-500 text-base font-normal leading-relaxed">Years of Experience</h4>
                 </div>
                 <div className="flex-col justify-start items-start inline-flex">
-                  <h4 className="text-red-600 text-4xl font-bold font-manrope leading-normal">125+</h4>
-                  <h6 className="text-gray-500 text-base font-normal leading-relaxed">Successful Projects</h6>
+                  <h3 className="text-red-600 text-4xl font-bold font-manrope leading-normal">125+</h3>
+                  <h4 className="text-gray-500 text-base font-normal leading-relaxed">Successful Projects</h4>
                 </div>
                 <div className="flex-col justify-start items-start inline-flex">
-                  <h4 className="text-red-600 text-4xl font-bold font-manrope leading-normal">52+</h4>
-                  <h6 className="text-gray-500 text-base font-normal leading-relaxed">Happy Clients</h6>
+                  <h3 className="text-red-600 text-4xl font-bold font-manrope leading-normal">52+</h3>
+                  <h4 className="text-gray-500 text-base font-normal leading-relaxed">Happy Clients</h4>
                 </div>
               </div>
             </div>

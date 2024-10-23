@@ -38,13 +38,13 @@ export function Process() {
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
         <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-white transition-colors duration-300 hover:bg-gray-200 shadow-md">
-          <span className="text-gray-800 font-medium">Process {index + 1}</span>
+          <span className="text-gray-950 font-medium">Process {index + 1}</span>
         </span>
       </SliderThumbItem>
     ));
 
   return (
-    <div className="relative border-t border-b border-gray-200 py-12 bg-gray-50">
+    <div className="relative border-t border-b border-gray-400 py-12 ">
       <h2 className="max-w-7xl mx-auto text-4xl font-bold text-gray-900 mt-10 mb-4 text-center">
         Our Manufacturing Process
       </h2>

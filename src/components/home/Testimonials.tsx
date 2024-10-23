@@ -38,9 +38,9 @@ const Testimonials = () => {
           <h1 className="text-3xl lg:text-5xl font-bold mb-5 text-gray-900">
             What People Are Saying
           </h1>
-          <h3 className="text-xl mb-5 font-light text-gray-700">
+          <h2 className="text-xl mb-5 font-light text-gray-700">
             Hear from our happy customers and partners.
-          </h3>
+          </h2>
           <div className="text-center">
             <span className="inline-block w-1 h-1 rounded-full bg-red-600 ml-1"></span>
             <span className="inline-block w-3 h-1 rounded-full bg-red-600 ml-1"></span>
@@ -67,9 +67,9 @@ const Testimonials = () => {
                   />
                 </div>
                 <div className="pl-4">
-                  <h6 className="font-bold text-sm uppercase text-gray-600">
+                  <h2 className="font-bold text-sm uppercase text-gray-600">
                     {testimonial.name}
-                  </h6>
+                  </h2>
                 </div>
               </div>
               <p className="text-sm leading-tight text-gray-800 mb-4">
