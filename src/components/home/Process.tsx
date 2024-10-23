@@ -17,7 +17,7 @@ export function Process() {
     >
       <Image
         src={craftSteps[index].image}
-        alt={craftSteps[index].title}
+        alt={`Image depicting ${craftSteps[index].title}`} // More descriptive alt text
         quality={100}
         loading="lazy"
         className="w-full h-full object-cover"
@@ -37,14 +37,18 @@ export function Process() {
   const renderThumbnails = () =>
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
-        <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-red-600 transition-colors duration-300 hover:bg-red-400 shadow-md">
+        <span
+          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-red-600 transition-colors duration-300 hover:bg-red-400 shadow-md"
+          tabIndex={0} // Make it focusable for keyboard navigation
+          aria-label={`Go to step ${index + 1}`} // Accessible label for thumbnails
+        >
           <span className="text-white font-medium p-2">Step {index + 1}</span>
         </span>
       </SliderThumbItem>
     ));
 
   return (
-    <div className="relative border-t border-b border-gray-400 py-12 ">
+    <div className="relative border-t border-b border-gray-400 py-12">
       <h2 className="max-w-7xl mx-auto text-4xl font-bold text-gray-900 mt-10 mb-4 text-center">
         Our Manufacturing Process
       </h2>
