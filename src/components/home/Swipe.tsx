@@ -2,6 +2,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useState } from "react";
 import { CARD_DATA } from "../../../constant";
+import Image from "next/image";
  
 export function DemoCardsSwipeV2() {
   const [cards, setCards] = useState(CARD_DATA);
@@ -49,10 +50,7 @@ function SwipCard({ id, url, setCards, cards }: TSwipeCard) {
   };
  
   return (
-    <motion.img
-      src={url}
-      alt="Placeholder alt"
-      className="h-72 w-60 md:h-96 md:w-72 origin-bottom rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
+    <motion.div
       style={{
         gridRow: 1,
         gridColumn: 1,
@@ -68,7 +66,17 @@ function SwipCard({ id, url, setCards, cards }: TSwipeCard) {
       drag={isFront ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
       onDragEnd={handleDragEnd}
-    />
+    >
+      <Image
+        src={url}
+        alt="Placeholder alt"
+        className="h-72 w-60 md:h-96 md:w-72 origin-bottom rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
+        width={500}
+        height={500}
+        loading="lazy"
+        />
+
+    </motion.div>
   );
 }
 

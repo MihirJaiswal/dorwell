@@ -9,6 +9,12 @@ const nextConfig = {
         },
         {
           hostname: 'pagedone.io',
+        },
+        {
+          hostname: 'images.unsplash.com'
+        },
+        {
+          hostname: 'plus.unsplash.com'
         }
       ],
     },
