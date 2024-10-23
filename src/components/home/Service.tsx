@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { service } from '../../../constant'; // Ensure the correct path to constant.js
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { features } from "../../../constant";
 
@@ -10,7 +9,6 @@ const BentoGridDemo = () => {
           We are a door manufacturing company specializing in designer doors. With expertise in membrane, laminate, and veneer doors, we deliver top-notch quality and style.
         </p>
       </div>
-
       <div className="grid max-w-7xl mx-auto p-10 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => (
           <div
@@ -35,6 +33,5 @@ const BentoGridDemo = () => {
       </div>
     </div>
   );
-};
-
+}
 export default BentoGridDemo;

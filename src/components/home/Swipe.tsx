@@ -7,7 +7,7 @@ export function DemoCardsSwipeV2() {
   const [cards, setCards] = useState(CARD_DATA);
  
   return (
-    <div className="grid h-[500px] w-full place-items-center">
+    <div className="grid h-[350px] md:h-[500px] w-full place-items-center">
       {cards.map((card) => {
         return <SwipCard key={card.id} cards={cards} setCards={setCards} {...card} />;
       })}
@@ -52,7 +52,7 @@ function SwipCard({ id, url, setCards, cards }: TSwipeCard) {
     <motion.img
       src={url}
       alt="Placeholder alt"
-      className="h-96 w-72 origin-bottom rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
+      className="h-72 w-60 md:h-96 md:w-72 origin-bottom rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
       style={{
         gridRow: 1,
         gridColumn: 1,

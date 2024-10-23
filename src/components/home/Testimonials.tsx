@@ -1,4 +1,3 @@
-import React from "react";
 import { testimonialsData } from "../../../constant";
 import Image from "next/image";
 

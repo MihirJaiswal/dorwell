@@ -17,13 +17,13 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-bg2 p-8 rounded-lg shadow-lg relative overflow-hidden">
+          <div className="p-8 rounded-lg shadow-lg relative overflow-hidden">
             {/* Semicircular top */}
-            <div className="absolute top-0 left-0 right-0 h-20 bg-bg2 rounded-t-full transform -translate-y-10" />
+            <div className="absolute top-0 left-0 right-0 h-20 rounded-t-full transform -translate-y-10" />
             <form className="mt-10 space-y-6">
               <div>
                 <label
-                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                   htmlFor="name"
                 >
                   Name
@@ -38,7 +38,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <label
-                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                   htmlFor="email"
                 >
                   Email
@@ -53,7 +53,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <label
-                  className="block text-sm font-semibold text-gray-200 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                   htmlFor="message"
                 >
                   Message
@@ -83,32 +83,27 @@ const ContactSection = () => {
               Contact Information
             </h3>
             <div className="bg-white p-6 rounded-lg shadow-lg text-sm">
-  {contactInfo.map((contact, index) => (
-    <div key={index} className="flex items-center space-x-4 mb-4">
-      <span className="text-red-600 text-lg font-semibold">
-        {contact.label}:
-      </span>
-      {contact.link ? (
-        <a
-          href={contact.link}
-          className="text-gray-800 hover:text-indigo-600 transition duration-200 transform hover:scale-105"
-          target="_blank"
-          rel="noopener noreferrer" // Added for better security
-        >
-          {contact.value}
-        </a>
-      ) : (
-        <span className="text-gray-700">{contact.value}</span>
-      )}
-    </div>
-  ))}
-</div>
-
-
+              {contactInfo.map((contact, index) => (
+                <div key={index} className="flex items-center space-x-4 mb-4">
+                  <span className="text-red-600 text-lg font-semibold">
+                    {contact.label}:
+                  </span>
+                  {contact.link ? (
+                    <a
+                      href={contact.link}
+                      className="text-gray-800 hover:text-indigo-600 transition duration-200 transform hover:scale-105"
+                      target="_blank"
+                      rel="noopener noreferrer" // Added for better security
+                    >
+                      {contact.value}
+                    </a>
+                  ) : (
+                    <span className="text-gray-700">{contact.value}</span>
+                  )}
+                </div>
+              ))}
+            </div>
             <div className="mt-8">
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">
-                Location
-              </h4>
               <div className="relative overflow-hidden rounded-lg shadow-md">
                 <iframe
                   title="Google Map"
