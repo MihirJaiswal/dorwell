@@ -13,15 +13,16 @@ export function Process() {
   const renderCarouselContent = (index: number) => (
     <SliderMainItem
       key={index}
-      className="flex h-full items-center justify-center rounded-lg border border-gray-500 shadow-md relative overflow-hidden transition-transform duration-300 hover:scale-105 focus-within:ring-2 focus-within:ring-red-500"
+      className="flex h-full w-full items-center justify-center rounded-lg border border-gray-500 shadow-md relative overflow-hidden transition-transform duration-300 hover:scale-105 focus-within:ring-2 focus-within:ring-red-500"
     >
       <Image
         src={craftSteps[index].image}
         alt={`Image depicting ${craftSteps[index].title}`} // Accessible alt text
         quality={100}
         loading="lazy"
-        className="w-full h-full object-cover"
-        layout="fill"
+        className="w-full h-full object-cover scale-105 "
+        width={1000}
+        height={1000}
       />
       <div className="absolute bottom-0 right-0 p-4 bg-black bg-opacity-75 rounded-tl-md rounded-br-md">
         <h2 className="text-lg font-semibold text-white">
