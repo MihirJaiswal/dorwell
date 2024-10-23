@@ -5,12 +5,11 @@ import logo from '../../../public/logo.png';
 import { footerSections } from "../../../constant";
 
 const Footer = () => {
-
   const socialIcons = [
-    { component: <FaFacebookF />, href: "https://nextjs.org/" },
-    { component: <FaTwitter />, href: "https://react-icons.github.io/react-icons/" },
-    { component: <FaInstagram />, href: "https://vercel.com/" },
-    { component: <FaLinkedinIn />, href: "https://chatgpt.com/" },
+    { component: <FaFacebookF />, href: "https://nextjs.org/", label: "Visit our Facebook page" },
+    { component: <FaTwitter />, href: "https://react-icons.github.io/react-icons/", label: "Visit our Twitter page" },
+    { component: <FaInstagram />, href: "https://vercel.com/", label: "Visit our Instagram page" },
+    { component: <FaLinkedinIn />, href: "https://chatgpt.com/", label: "Visit our LinkedIn page" },
   ];
 
   return (
@@ -21,7 +20,7 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start">
               <Image 
                 src={logo}
-                alt="logo"
+                alt="Company Logo" // Updated alt text for clarity
                 placeholder="blur"
                 loading="lazy"
                 quality={100}
@@ -55,14 +54,18 @@ const Footer = () => {
 
         <div className="py-7 border-t border-gray-200">
           <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-            <span className="text-sm text-gray-500">©<a href="https://pagedone.io/">Dorwell</a> 2024, All rights reserved.</span>
+            <span className="text-sm text-gray-500">
+              ©<a href="https://dorwell.vercel.app/">Dorwell</a> 2024, All rights reserved.
+            </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0">
               {socialIcons.map((icon, idx) => (
                 <a
                   key={idx}
                   href={icon.href}
-                  className="w-9 h-9 rounded-full bg-gray-300 flex justify-center items-center hover:bg-red-600"
+                  className="w-9 h-9 rounded-full bg-gray-300 flex justify-center items-center hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  aria-label={icon.label} // Add aria-label for screen readers
                 >
+                  <span className="sr-only">{icon.label}</span> {/* Visually hidden text */}
                   {icon.component}
                 </a>
               ))}
