@@ -20,7 +20,6 @@ const ZoomedImage = ({ className, imgSrc }: { className?: string; imgSrc: string
       <Image
         src={imgSrc}
         quality={100}
-        loading="lazy"
         placeholder="blur"
         alt="Hero"
         style={{
