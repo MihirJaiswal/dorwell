@@ -13,21 +13,21 @@ export function Process() {
   const renderCarouselContent = (index: number) => (
     <SliderMainItem
       key={index}
-      className="flex h-full items-center justify-center rounded-lg border border-gray-300 shadow-md relative overflow-hidden transition-transform duration-300 hover:scale-105"
+      className="flex h-full items-center justify-center rounded-lg border border-gray-500 shadow-md relative overflow-hidden transition-transform duration-300 hover:scale-105 focus-within:ring-2 focus-within:ring-red-500"
     >
       <Image
         src={craftSteps[index].image}
-        alt={`Image depicting ${craftSteps[index].title}`} // More descriptive alt text
+        alt={`Image depicting ${craftSteps[index].title}`} // Accessible alt text
         quality={100}
         loading="lazy"
         className="w-full h-full object-cover"
         layout="fill"
       />
-      <div className="absolute bottom-0 right-0 p-4 bg-black bg-opacity-70 rounded-tl-md rounded-br-md">
+      <div className="absolute bottom-0 right-0 p-4 bg-black bg-opacity-75 rounded-tl-md rounded-br-md">
         <h2 className="text-lg font-semibold text-white">
           {craftSteps[index].title}
         </h2>
-        <p className="text-sm text-gray-300">
+        <p className="text-sm text-gray-300 leading-relaxed">
           {craftSteps[index].description}
         </p>
       </div>
@@ -38,9 +38,9 @@ export function Process() {
     craftSteps.map((_, index) => (
       <SliderThumbItem key={index} index={index} className="rounded-md bg-transparent">
         <span
-          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-300 bg-gray-900 transition-colors duration-300 hover:bg-red-400 shadow-md"
-          tabIndex={0} // Make it focusable for keyboard navigation
-          aria-label={`Go to step ${index + 1}`} // Accessible label for thumbnails
+          className="flex h-full w-full cursor-pointer items-center justify-center rounded-md border border-gray-500 bg-gray-800 hover:bg-red-500 transition-colors duration-300 shadow-md focus:ring-2 focus:ring-red-500"
+          tabIndex={0} // Ensure keyboard accessibility
+          aria-label={`Go to step ${index + 1}`}
         >
           <span className="text-white font-medium p-2">Step {index + 1}</span>
         </span>
@@ -48,11 +48,11 @@ export function Process() {
     ));
 
   return (
-    <div className="relative border-t border-b border-gray-400 py-12">
+    <div className="relative border-t border-b border-gray-500 py-12">
       <h2 className="max-w-7xl mx-auto text-4xl font-bold text-gray-900 mt-10 mb-4 text-center">
         Our Manufacturing Process
       </h2>
-      <p className="max-w-6xl mx-auto px-6 text-gray-600 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center mb-10">
+      <p className="max-w-6xl mx-auto px-6 text-gray-700 text-sm md:text-base text-justify font-normal leading-relaxed lg:text-start md:text-center mb-10">
         Our Manufacturing Process ensures that every stage, from design to production, 
         is carefully executed for superior quality and innovation.
       </p>
